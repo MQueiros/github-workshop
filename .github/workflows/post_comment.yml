@@ -1,0 +1,14 @@
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  label_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
+          PR: ${{ github.event.pull_request.html_url }}
+        run: |
+          gh pr comment $PR --body 'DON'T FORGET THE COMMIT GUIDELINES BRO!`
