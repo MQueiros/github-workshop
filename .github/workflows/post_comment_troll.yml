@@ -1,7 +1,7 @@
 on:
-  pull_request:
+  pull_request_review_comment:
     types:
-      - opened
+      - types: [created, changed]
 
 jobs:
   label_issue:
@@ -11,4 +11,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
           PR: ${{ github.event.pull_request.html_url }}
         run: |
-          gh pr comment $PR --body 'DO NOT FORGET THE COMMIT GUIDELINES BRO!'
+          gh pr comment $PR --body 'THANK YOU FOR YOUR COMMENT. WE'LL CONTACT YOU DURING THE NEXT 1000 HOURS!'
