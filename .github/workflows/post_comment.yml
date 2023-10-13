@@ -11,4 +11,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
           PR: ${{ github.event.pull_request.html_url }}
         run: |
-          gh pr comment $PR --body 'DON'T FORGET THE COMMIT GUIDELINES BRO!`
+          gh pr comment $PR --body 'DO NOT FORGET THE COMMIT GUIDELINES BRO!'
