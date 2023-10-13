@@ -1,7 +1,6 @@
 on:
   pull_request_review_comment:
-    types:
-      - types: [created, changed]
+    types: [created, changed]
 
 jobs:
   label_issue:
